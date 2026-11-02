@@ -1,0 +1,38 @@
+name: OverTheFence
+options:
+  bundleIdPrefix: com.reallygoodgame
+  deploymentTarget:
+    iOS: "15.0"
+targets:
+  OverTheFence:
+    type: application
+    platform: iOS
+    sources:
+      - path: OverTheFence
+        excludes:
+          - "www"
+          - "www/**"
+          - "Info.plist"
+      - path: OverTheFence/www
+        type: folder
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_NAME: OverTheFence
+        PRODUCT_BUNDLE_IDENTIFIER: com.reallygoodgame.overthefence
+        INFOPLIST_FILE: OverTheFence/Info.plist
+        GENERATE_INFOPLIST_FILE: NO
+        TARGETED_DEVICE_FAMILY: "1,2"
+        MARKETING_VERSION: "1.0"
+        CURRENT_PROJECT_VERSION: "1"
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        SWIFT_VERSION: "5.0"
+        ENABLE_BITCODE: NO
+        VERSIONING_SYSTEM: apple-generic
+schemes:
+  OverTheFence:
+    build:
+      targets:
+        OverTheFence: all
+    archive:
+      config: Release
