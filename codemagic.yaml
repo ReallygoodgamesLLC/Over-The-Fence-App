@@ -6,7 +6,7 @@ workflows:
     integrations:
       # Use the SAME App Store Connect API key integration name you set up for Witch's Greenhouse
       # (Codemagic → Team settings → Integrations → Developer Portal). Change this line to match it.
-      app_store_connect: 39TAPU596T
+      app_store_connect: "Witch Greenhouse API key"
     environment:
       ios_signing:
         distribution_type: app_store
